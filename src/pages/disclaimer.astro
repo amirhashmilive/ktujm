@@ -1,0 +1,83 @@
+---
+// src/pages/disclaimer.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbs = [{ label: 'Disclaimer & Policies' }];
+---
+
+<BaseLayout title="Disclaimer, Neutrality & Content Policy" breadcrumbs={breadcrumbs}>
+  <h1>Disclaimer, Neutrality & Content Policy</h1>
+  <p style="color: var(--color-text-muted); font-size: 16px; margin-bottom: 24px;">
+    Official operational charter governing independent status, copyright compliance, and academic tone.
+  </p>
+
+  <div class="card" style="border-left: 4px solid var(--color-accent); margin-bottom: 24px;">
+    <h2 style="margin-top: 0; color: var(--color-accent);">1. Statement of Independence</h2>
+    <p style="font-size: 15px; line-height: 1.7;">
+      <strong>KTUJM Scholars (<code>amirhashmilive.github.io/ktujm</code>)</strong> is an independent, non-official educational resource and student mentorship initiative created by alumnus and Ph.D. scholar Amir Hashmi. 
+    </p>
+    <p style="font-size: 14px; line-height: 1.7; color: var(--color-text-muted); margin-top: 8px;">
+      This website is <strong>NOT affiliated with, sponsored by, authorized by, or endorsed by</strong> Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya (KTUJM), Raipur, Chhattisgarh. The official website of the university is hosted at <a href="https://www.ktujm.ac.in/" target="_blank" rel="noopener noreferrer">https://www.ktujm.ac.in/</a>.
+    </p>
+  </div>
+
+  <section style="margin-bottom: 32px;">
+    <h2>2. Tentative Syllabus Notice</h2>
+    <div class="card">
+      <p style="font-size: 14px; line-height: 1.6;">
+        All curricula, paper codes, unit titles, and topic outlines published on this platform are reproduced tentatively by student editors for note-taking and revision structuring only. 
+      </p>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-text-muted); margin-top: 8px;">
+        University ordinances and syllabi are subject to statutory amendments by the Academic Council. For definitive evaluation schemes, pass marks, internal assessment criteria, and authoritative ordinances, students must always consult the official university website.
+      </p>
+      <p style="margin-top: 12px;">
+        <a href="https://www.ktujm.ac.in/ordinance.htm" target="_blank" rel="noopener noreferrer" style="font-weight: 600; font-size: 14px;">
+          Access Official University Ordinance & Syllabus Portal ↗
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 32px;">
+    <h2>3. Institutional Neutrality & Tone Policy</h2>
+    <div class="card">
+      <p style="font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+        To protect the academic reputation of participating scholars and maintain a welcoming space for all students, KTUJM Scholars enforces a strict <strong>institutional-neutrality policy</strong>:
+      </p>
+      <ul style="font-size: 14px; margin-left: 20px; line-height: 1.7;">
+        <li><strong>Strictly Academic & Educational:</strong> Content is confined to subject notes, conceptual models, exam preparations, alumni career stories, and university-life resources.</li>
+        <li><strong>Zero Campus Politics:</strong> Partisan political debates, union manifestos, personal allegations, administrative grievances, or protest campaigns are strictly prohibited.</li>
+        <li><strong>Constructive & Supportive:</strong> Criticism must be confined to scholarly critiques of media theories and academic literature.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 32px;">
+    <h2>4. Copyright & Document Embedding Policy</h2>
+    <div class="card">
+      <p style="font-size: 14px; line-height: 1.6;">
+        In compliance with academic fair use and intellectual property respect:
+      </p>
+      <ul style="font-size: 14px; margin-left: 20px; line-height: 1.7; margin-top: 8px;">
+        <li>We do <strong>NOT</strong> host, download, copy, or embed official university PDF documents, circulars, or proprietary question booklets.</li>
+        <li>All references to official statutory documents are provided exclusively as external hyperlinks to official university servers (<code>ktujm.ac.in</code>).</li>
+        <li>We do not utilize the official university crest, logo, or sealed emblem in our branding.</li>
+        <li>User-submitted notes are contributed under open academic sharing and remain the intellectual property of their respective student authors.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Contact for Policy & Editorial Inquiries</h2>
+    <div class="card" style="background: #f7fafc;">
+      <p style="font-size: 14px; line-height: 1.6;">
+        If you are an educator, researcher, or university administrator with feedback or content corrections, please open an issue or reach out via our GitHub repository:
+      </p>
+      <p style="margin-top: 8px;">
+        <a href="https://github.com/amirhashmilive/ktujm/issues" target="_blank" rel="noopener noreferrer" style="font-weight: 600; font-size: 14px;">
+          Submit Feedback via GitHub Issues ↗
+        </a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

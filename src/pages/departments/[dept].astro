@@ -1,0 +1,191 @@
+---
+// src/pages/departments/[dept].astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const departments = [
+    {
+      slug: 'mass-communication',
+      name: 'Department of Mass Communication',
+      hod: 'Dr. Shahid Ali / Dr. Rajendra Mohanty',
+      contact: '09407691051, 09425520352',
+      email: 'masscomm@ktujm.ac.in',
+      courses: [
+        { code: 'MAMC', name: 'Master of Arts (Mass Communication)', link: '/ktujm/courses/mamc/', status: 'published' },
+        { code: 'BA-MC', name: 'Bachelor of Arts (Mass Communication)', link: '#', status: 'draft' },
+        { code: 'Ph.D.', name: 'Ph.D. in Mass Communication', link: '#', status: 'draft' },
+      ],
+      description: 'The Department of Mass Communication is the flagship academic unit of the University, established to provide thorough training in communication theory, mass media history, development communication, media laws, and audio-visual production.',
+      coordinator: 'Ph.D. Scholar Representative: Pending appointment for 2026-27 term'
+    },
+    {
+      slug: 'journalism',
+      name: 'Department of Journalism',
+      hod: 'Shri Pankaj Nayan Pandey',
+      contact: '09630312676',
+      email: 'journalism@ktujm.ac.in',
+      courses: [
+        { code: 'MJ', name: 'Master of Journalism', link: '#', status: 'draft' },
+        { code: 'PGDJ', name: 'Post Graduate Diploma in Journalism', link: '#', status: 'draft' },
+      ],
+      description: 'Offers professional instruction in news reporting, print editing, investigative journalism, photojournalism, and newspaper management.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    },
+    {
+      slug: 'public-relations-advertising',
+      name: 'Department of Public Relations & Advertising',
+      hod: 'Dr. Shailendra Khandelwal',
+      contact: '09425236688',
+      email: 'apr@ktujm.ac.in',
+      courses: [
+        { code: 'MA-APR', name: 'Master of Arts (Advertising & PR)', link: '#', status: 'draft' },
+        { code: 'PGDCC', name: 'PGD in Corporate Communication', link: '#', status: 'draft' },
+      ],
+      description: 'Covers advertising copywriting, campaign design, media planning, brand management, crisis PR, and corporate social responsibility.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    },
+    {
+      slug: 'electronic-media',
+      name: 'Department of Electronic Media',
+      hod: 'Dr. Nripendra Sharma',
+      contact: '+91-9098974485',
+      email: 'electronicmedia@ktujm.ac.in',
+      courses: [
+        { code: 'BA-EM', name: 'BA in Electronic Media', link: '#', status: 'draft' },
+        { code: 'MA-EM', name: 'MA in Electronic Media', link: '#', status: 'draft' },
+      ],
+      description: 'Focuses on television and radio production, script writing, video editing, lighting, camera operation, and audio engineering.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    },
+    {
+      slug: 'social-work',
+      name: 'Department of Social Work',
+      hod: 'Dr. Nripendra Sharma',
+      contact: '+91-9098974485',
+      email: 'socialwork@ktujm.ac.in',
+      courses: [
+        { code: 'MSW', name: 'Master of Social Work', link: '#', status: 'draft' },
+        { code: 'PGDPCR', name: 'PG Diploma in Police & Criminal Rehabilitation', link: '#', status: 'draft' },
+      ],
+      description: 'Prepares students for social interventions, community development, psychiatric social work, and child welfare in tribal and rural Chhattisgarh.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    },
+    {
+      slug: 'management',
+      name: 'Department of Management',
+      hod: 'Dr. Ashutosh Mandavi',
+      contact: '09407990437',
+      email: 'ashutosh.mandavi@gmail.com',
+      courses: [
+        { code: 'MBA-MM', name: 'MBA (Media Management)', link: '#', status: 'draft' },
+        { code: 'MBA-HA', name: 'MBA (Hospital Administration)', link: '#', status: 'draft' },
+        { code: 'BBA', name: 'Bachelor of Business Administration', link: '#', status: 'draft' },
+      ],
+      description: 'Bridges business administration, media economics, event marketing, hospital administration, and human resource development.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    },
+    {
+      slug: 'language',
+      name: 'Department of Language',
+      hod: 'Dr. Rajendra Mohanty',
+      contact: '09425520352',
+      email: 'bhasha@ktujm.ac.in',
+      courses: [
+        { code: 'MA-HI', name: 'MA in Hindi', link: '#', status: 'draft' },
+        { code: 'MA-CG', name: 'MA in Chhattisgarhi', link: '#', status: 'draft' },
+      ],
+      description: 'Dedicated to preserving and developing regional languages and literature, with special emphasis on the rich oral and written traditions of Chhattisgarhi.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    },
+    {
+      slug: 'library-science',
+      name: 'Department of Library & Information Science',
+      hod: 'Dr. Rajendra Mohanty',
+      contact: '09425520352',
+      email: 'masscomm@ktujm.ac.in',
+      courses: [
+        { code: 'B.Lib', name: 'Bachelor of Library & Information Science', link: '#', status: 'draft' },
+        { code: 'M.Lib', name: 'Master of Library & Information Science', link: '#', status: 'draft' },
+      ],
+      description: 'Training in modern library management, automated cataloging, digital repository administration, and information retrieval.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    },
+    {
+      slug: 'information-technology',
+      name: 'Department of Information Technology',
+      hod: 'Dr. Shailendra Khandelwal',
+      contact: '09425236688',
+      email: 'bhasha@ktujm.ac.in',
+      courses: [
+        { code: 'PGDCA', name: 'PG Diploma in Computer Applications', link: '#', status: 'draft' },
+        { code: 'DCA', name: 'Diploma in Computer Applications', link: '#', status: 'draft' },
+      ],
+      description: 'Computer skills, software applications, desktop publishing, web authoring, and information technology in communication.',
+      coordinator: 'Ph.D. Scholar Representative: In nomination process'
+    }
+  ];
+
+  return departments.map((d) => ({
+    params: { dept: d.slug },
+    props: { deptData: d },
+  }));
+}
+
+const { deptData } = Astro.props;
+
+const breadcrumbs = [
+  { label: 'Departments', href: '/ktujm/departments/' },
+  { label: deptData.name },
+];
+---
+
+<BaseLayout title={deptData.name} breadcrumbs={breadcrumbs}>
+  <h1>{deptData.name}</h1>
+  <p style="color: var(--color-text-muted); font-size: 16px; margin-bottom: 24px;">
+    Academic Department Overview • Student Notes & Study Guides
+  </p>
+
+  <div class="card" style="margin-bottom: 24px;">
+    <h3>About the Department</h3>
+    <p style="margin-bottom: 16px;">{deptData.description}</p>
+
+    <div style="background: #f7fafc; padding: 12px 16px; border-radius: 6px; font-size: 14px;">
+      <div><strong>Head of Department / In-Charge:</strong> {deptData.hod}</div>
+      <div><strong>Contact Number:</strong> {deptData.contact}</div>
+      <div><strong>Official Department Email:</strong> <code>{deptData.email}</code></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom: 24px;">
+    <h3>Academic Programmes & Notes Access</h3>
+    <ul class="topic-list" style="margin-top: 12px;">
+      {deptData.courses.map((course: any) => (
+        <li>
+          <div>
+            <strong>{course.code}</strong> — {course.name}
+          </div>
+          {course.status === 'published' ? (
+            <a href={course.link} class="badge badge-published" style="text-decoration: none;">
+              Open Notes Hub &rarr;
+            </a>
+          ) : (
+            <span class="badge badge-draft">Phase 2</span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="card" style="border-left: 4px solid var(--color-primary);">
+    <h3>Departmental Editorial Coordination</h3>
+    <p style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 12px;">
+      Under our 3-tier governance model, each department is assigned 1–2 Ph.D. scholars to coordinate notes collection, verify syllabus accuracy, and publish verified study guides.
+    </p>
+    <p style="font-size: 14px; font-weight: 600;">
+      Current Status: {deptData.coordinator}
+    </p>
+    <a href="/ktujm/editorial-board/" style="font-size: 13px; font-weight: 600;">
+      Read Editorial Board Charter &rarr;
+    </a>
+  </div>
+</BaseLayout>

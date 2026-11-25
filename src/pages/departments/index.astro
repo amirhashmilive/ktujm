@@ -1,0 +1,126 @@
+---
+// src/pages/departments/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbs = [{ label: 'Departments' }];
+
+const departments = [
+  {
+    slug: 'mass-communication',
+    name: 'Department of Mass Communication',
+    hod: 'Dr. Shahid Ali / Dr. Rajendra Mohanty',
+    courses: ['BA (Mass Communication)', 'MA (Mass Communication)', 'Ph.D. in Mass Communication'],
+    notesStatus: 'Active (MAMC 554 Topics)',
+    email: 'masscomm@ktujm.ac.in',
+    desc: 'The foundational department offering comprehensive curricula across communication theory, media culture, research methodologies, and development communication.'
+  },
+  {
+    slug: 'journalism',
+    name: 'Department of Journalism',
+    hod: 'Shri Pankaj Nayan Pandey',
+    courses: ['MJ (Master of Journalism)', 'PGDJ (PG Diploma in Journalism)', 'Ph.D. in Journalism'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'journalism@ktujm.ac.in',
+    desc: 'Focusing on print journalism, investigative reporting, editorial writing, newsroom desk operations, and Hindi press history.'
+  },
+  {
+    slug: 'public-relations-advertising',
+    name: 'Department of Public Relations & Advertising',
+    hod: 'Dr. Shailendra Khandelwal',
+    courses: ['MA (Advertising & Public Relations)', 'PGD in Corporate Communication', 'PGD in Event Management'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'apr@ktujm.ac.in',
+    desc: 'Bridging creative storytelling, copy writing, media planning, brand management, crisis PR, and corporate social responsibility.'
+  },
+  {
+    slug: 'electronic-media',
+    name: 'Department of Electronic Media',
+    hod: 'Dr. Nripendra Sharma',
+    courses: ['BA (Electronic Media)', 'MA (Electronic Media)', 'Audio-Visual Production'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'electronicmedia@ktujm.ac.in',
+    desc: 'Operating broadcast radio and television studios, camera direction, lighting, multi-track audio engineering, and non-linear video editing.'
+  },
+  {
+    slug: 'social-work',
+    name: 'Department of Social Work',
+    hod: 'Dr. Nripendra Sharma',
+    courses: ['MSW (Master of Social Work)', 'PGDPCR / Rakshak'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'socialwork@ktujm.ac.in',
+    desc: 'Empowering communities through field work, social policy, child and tribal welfare, rural mobilization, and psychiatric rehabilitation in Chhattisgarh.'
+  },
+  {
+    slug: 'management',
+    name: 'Department of Management',
+    hod: 'Dr. Ashutosh Mandavi',
+    courses: ['BBA', 'MBA (Media Management)', 'MBA (Hospital Administration)', 'MBA (HRD)'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'ashutosh.mandavi@gmail.com',
+    desc: 'Integrating business analytics, media monetization, newspaper circulation strategy, audience TRP measurement, and organizational behavior.'
+  },
+  {
+    slug: 'language',
+    name: 'Department of Language',
+    hod: 'Dr. Rajendra Mohanty',
+    courses: ['MA (Hindi)', 'MA (Chhattisgarhi)'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'bhasha@ktujm.ac.in',
+    desc: 'Promoting regional Chhattisgarhi language literature and classical Hindi linguistics, translation studies, and folk culture documentation.'
+  },
+  {
+    slug: 'library-science',
+    name: 'Department of Library & Information Science',
+    hod: 'Dr. Rajendra Mohanty',
+    courses: ['B.Lib & I.Sc', 'M.Lib & I.Sc'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'masscomm@ktujm.ac.in',
+    desc: 'Information classification, digital archives, database cataloging, research informatics, and knowledge curation.'
+  },
+  {
+    slug: 'information-technology',
+    name: 'Department of Information Technology',
+    hod: 'Dr. Shailendra Khandelwal',
+    courses: ['PGDCA', 'DCA'],
+    notesStatus: 'Phase 2 Onboarding',
+    email: 'bhasha@ktujm.ac.in',
+    desc: 'Computer fundamentals, multimedia web authoring, desktop publishing (DTP), cyber laws, and digital media technologies.'
+  }
+];
+---
+
+<BaseLayout title="Academic Departments Directory" breadcrumbs={breadcrumbs}>
+  <h1>Academic Departments Directory</h1>
+  <p style="color: var(--color-text-muted); margin-bottom: 24px;">
+    University teaching departments and their associated student notes initiatives.
+  </p>
+
+  <div class="card-grid">
+    {departments.map((d) => (
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+          <h3 style="margin: 0; font-size: 17px;">
+            <a href={`/ktujm/departments/${d.slug}/`}>{d.name}</a>
+          </h3>
+          <span class="badge badge-published" style="font-size: 10px; white-space: nowrap;">
+            {d.notesStatus}
+          </span>
+        </div>
+
+        <p style="font-size: 13px; color: var(--color-text-muted); margin-bottom: 12px;">
+          {d.desc}
+        </p>
+
+        <div style="font-size: 13px; background: #f7fafc; padding: 10px; border-radius: 4px; margin-bottom: 12px;">
+          <div><strong>Key Courses:</strong> {d.courses.join(', ')}</div>
+          <div><strong>Department In-Charge:</strong> {d.hod}</div>
+          <div><strong>Official Email:</strong> <code>{d.email}</code></div>
+        </div>
+
+        <a href={`/ktujm/departments/${d.slug}/`} style="font-size: 13px; font-weight: 600;">
+          View Department Details & Notes &rarr;
+        </a>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,112 @@
+---
+// src/pages/contribute.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbs = [{ label: 'Contribute' }];
+---
+
+<BaseLayout title="How to Contribute — Notes & Alumni Interviews" breadcrumbs={breadcrumbs}>
+  <h1>How to Contribute</h1>
+  <p style="color: var(--color-text-muted); font-size: 16px; margin-bottom: 24px;">
+    Join our student-scholar network. Submit lecture notes, refine existing stubs, or interview prominent alumni.
+  </p>
+
+  <div class="card-grid" style="margin-bottom: 32px;">
+    <div class="card" style="border-left: 4px solid var(--color-primary-light);">
+      <h3>Method 1: Direct GitHub Pull Request</h3>
+      <p style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 12px;">
+        For students and scholars familiar with Markdown or GitHub:
+      </p>
+      <ol style="font-size: 13px; margin-left: 18px; line-height: 1.6;">
+        <li>Fork the repository at <code>amirhashmilive/ktujm</code>.</li>
+        <li>Locate the relevant topic stub under <code>content/notes/&lt;course&gt;/sem-&lt;n&gt;/...</code></li>
+        <li>Replace the placeholder text with your definitions, concepts, and diagrams.</li>
+        <li>Update the frontmatter: change <code>status: "draft"</code> to <code>"review"</code> and add your name.</li>
+        <li>Submit a Pull Request. A Ph.D. Coordinator will review and merge it.</li>
+      </ol>
+      <a href="https://github.com/amirhashmilive/ktujm" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 12px; font-weight: 600; font-size: 14px;">
+        Open GitHub Repository ↗
+      </a>
+    </div>
+
+    <div class="card" style="border-left: 4px solid #38a169;">
+      <h3>Method 2: Email / GitHub Issue Submission</h3>
+      <p style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 12px;">
+        For students who prefer writing in Word, Google Docs, or plain text:
+      </p>
+      <ol style="font-size: 13px; margin-left: 18px; line-height: 1.6;">
+        <li>Structure your notes according to our standardized 7-section template.</li>
+        <li>Include course name, semester, paper code, and unit number.</li>
+        <li>Attach your document in a GitHub Issue or send it to your Departmental Coordinator.</li>
+        <li>A scholar editor will format it in Markdown, attribute your authorship, and publish it.</li>
+      </ol>
+      <a href="https://github.com/amirhashmilive/ktujm/issues/new" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 12px; font-weight: 600; font-size: 14px;">
+        Submit via GitHub Issue ↗
+      </a>
+    </div>
+  </div>
+
+  <section style="margin-bottom: 40px;">
+    <h2>Standardized 7-Section Note Template</h2>
+    <p style="color: var(--color-text-muted); font-size: 14px; margin-bottom: 16px;">
+      All published notes adhere to this uniform pedagogical structure:
+    </p>
+
+    <div class="card" style="background: #f7fafc; font-family: var(--font-mono); font-size: 13px; line-height: 1.6;">
+      <div style="color: #2b6cb0; font-weight: bold;">1. Definition</div>
+      <div style="color: #4a5568; margin-bottom: 8px;">Precise, academic definition with authoritative citations (e.g., Wilbur Schramm, Denis McQuail).</div>
+
+      <div style="color: #2b6cb0; font-weight: bold;">2. Key Concepts & Models</div>
+      <div style="color: #4a5568; margin-bottom: 8px;">Core principles, theoretical frameworks, and bulleted breakdowns.</div>
+
+      <div style="color: #2b6cb0; font-weight: bold;">3. Diagram (Mermaid / Flowchart)</div>
+      <div style="color: #4a5568; margin-bottom: 8px;">Visual depiction of the process, hierarchy, or model relations.</div>
+
+      <div style="color: #2b6cb0; font-weight: bold;">4. Examples (Chhattisgarh / India Context)</div>
+      <div style="color: #4a5568; margin-bottom: 8px;">Real-world media campaigns, state public relations instances, or regional case studies.</div>
+
+      <div style="color: #2b6cb0; font-weight: bold;">5. Exam-Style Questions</div>
+      <div style="color: #4a5568; margin-bottom: 8px;">Short answer (&le;100 words, 5 marks) and long comprehensive questions (10 marks).</div>
+
+      <div style="color: #2b6cb0; font-weight: bold;">6. Further Reading</div>
+      <div style="color: #4a5568; margin-bottom: 8px;">Standard reference textbooks and research papers.</div>
+
+      <div style="color: #2b6cb0; font-weight: bold;">7. References</div>
+      <div style="color: #4a5568;">Full bibliography in APA or MLA format.</div>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 40px;">
+    <h2>Alumni Interview Guide (Standard 8–10 Questions)</h2>
+    <p style="color: var(--color-text-muted); font-size: 14px; margin-bottom: 16px;">
+      Scholars conducting interviews for our <strong>Career & Alumni Spotlight</strong> should use this standardized question set:
+    </p>
+
+    <div class="card">
+      <ol style="margin-left: 20px; font-size: 14px; line-height: 1.8;">
+        <li><strong>Academic Journey:</strong> Which course and batch did you graduate from at the university, and what drew you to this field?</li>
+        <li><strong>Campus Memories:</strong> Looking back at your time at Kathadih campus, what is your most defining classroom, studio, or field memory?</li>
+        <li><strong>Career Turning Point:</strong> What was your first professional breakthrough after graduation, and how did your university education prepare you for it?</li>
+        <li><strong>Current Role:</strong> Could you describe your current responsibilities and the most exciting project you are leading today?</li>
+        <li><strong>Industry Realities:</strong> How has the media/communication landscape changed since you were a student, especially with digital tools and AI?</li>
+        <li><strong>Crucial Skills:</strong> What specific skills (technical, analytical, or interpersonal) should current students cultivate to succeed in the industry?</li>
+        <li><strong>Advice on Internship & Portfolio:</strong> How should students approach building a professional portfolio during their degree?</li>
+        <li><strong>Overcoming Setbacks:</strong> What was one significant professional hurdle you encountered, and how did you navigate it?</li>
+        <li><strong>Giving Back:</strong> In what ways can alumni contribute to mentoring the next generation of students?</li>
+        <li><strong>Message to Scholars:</strong> What is your parting message for current students and researchers stepping into the field?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Academic Tone & Quality Standards</h2>
+    <div class="card" style="border-left: 4px solid var(--color-accent);">
+      <h3 style="margin-top: 0;">Non-Negotiable Quality Rules</h3>
+      <ul style="font-size: 14px; margin-left: 20px; line-height: 1.7;">
+        <li><strong>No Plagiarism:</strong> Do not copy-paste directly from Wikipedia, commercial study guides, or copyrighted books. Synthesize in your own words.</li>
+        <li><strong>Institutional Neutrality:</strong> All content must remain strictly educational, objective, and scholarly. Campus politics, personal grievances, and partisan debates are prohibited.</li>
+        <li><strong>Proper Attributions:</strong> Quote sources, authors, and years accurately.</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

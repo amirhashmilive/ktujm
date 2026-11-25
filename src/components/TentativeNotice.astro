@@ -1,0 +1,18 @@
+---
+// src/components/TentativeNotice.astro
+export interface Props {
+  officialUrl?: string;
+}
+
+const { officialUrl = 'https://www.ktujm.ac.in/ordinance.htm' } = Astro.props;
+---
+
+<div class="tentative-notice" role="note">
+  <span class="icon">⚠️</span>
+  <div>
+    <strong>Tentative Academic Syllabus Reference:</strong> This curriculum mapping is reproduced by student editors for study guidance and note structuring. For authoritative evaluation schemes, question patterns, and official ordinances, always consult the university's official document:
+    <a href={officialUrl} target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline; margin-left: 4px;">
+      View Official University Ordinance PDF ↗
+    </a>
+  </div>
+</div>

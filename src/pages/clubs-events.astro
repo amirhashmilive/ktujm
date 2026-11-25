@@ -1,0 +1,51 @@
+---
+// src/pages/clubs-events.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbs = [{ label: 'Clubs & Events' }];
+---
+
+<BaseLayout title="Clubs & Campus Events" breadcrumbs={breadcrumbs}>
+  <h1>Clubs & Campus Events</h1>
+  <p style="color: var(--color-text-muted); font-size: 16px; margin-bottom: 24px;">
+    Student-led cultural activities, film screenings, literary circles, and photography exhibitions.
+  </p>
+
+  <div class="placeholder-box" style="margin-bottom: 32px;">
+    <h2>📅 Interactive Events Calendar Coming in Phase 2</h2>
+    <p style="max-width: 600px; margin: 8px auto 0; font-size: 14px;">
+      We are building an open community calendar to announce student film festivals, debates, media workshops, and guest lectures hosted across the Kathadih campus.
+    </p>
+    <span class="phase-label">Phase 2: Campus Integration</span>
+  </div>
+
+  <section>
+    <h2>Active Campus Student Circles (Directory in Progress)</h2>
+    <div class="card-grid" style="margin-top: 16px;">
+      <div class="card">
+        <h3>🎬 Film & Documentary Appreciation Club</h3>
+        <p style="font-size: 13px; color: var(--color-text-muted);">
+          Weekly screening and analysis of world cinema, Indian parallel cinema, and regional Chhattisgarhi documentaries in the Multi Media Centre.
+        </p>
+      </div>
+      <div class="card">
+        <h3>📸 Lens & Shutter: Photography Society</h3>
+        <p style="font-size: 13px; color: var(--color-text-muted);">
+          Photo walks along the Kharun river banks, portraiture workshops, and annual campus photojournalism exhibitions.
+        </p>
+      </div>
+      <div class="card">
+        <h3>🎙️ Radio Samvaad & Podcasting Group</h3>
+        <p style="font-size: 13px; color: var(--color-text-muted);">
+          Hands-on voice modulation, audio storytelling, scriptwriting, and community radio broadcasting sessions.
+        </p>
+      </div>
+      <div class="card">
+        <h3>✍️ Madhavrao Sapre Literary & Debate Society</h3>
+        <p style="font-size: 13px; color: var(--color-text-muted);">
+          Debates on media ethics, press freedom discussions, essay competitions, and creative writing workshops in Hindi and English.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

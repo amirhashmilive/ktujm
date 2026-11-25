@@ -1,0 +1,1024 @@
+# =============================================================================
+# MAMC (Master of Arts — Mass Communication) Syllabus Data
+# Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya
+# Ordinance No. 08 — Batch 2018-20
+# =============================================================================
+# DISCLAIMER: This is a TENTATIVE reproduction for study aid only.
+# Always refer to the official university ordinance PDF for authoritative content.
+# Official syllabus link: https://www.ktujm.ac.in/ordinance.htm
+# =============================================================================
+
+course: MAMC
+course_full_name: "Master of Arts (Mass Communication)"
+university: "Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya"
+ordinance: "Ordinance No. 08"
+batch: "2018-20"
+duration: "2 Years (4 Semesters)"
+official_syllabus_url: "https://www.ktujm.ac.in/ordinance.htm"
+
+semesters:
+  # ===================== SEMESTER I =====================
+  - semester: 1
+    papers:
+      - paper_code: "MAMC-101"
+        paper_name: "Communication: Concepts and Processes"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Communication"
+            topics:
+              - "Meaning and Definition of Communication"
+              - "Nature and Scope of Communication"
+              - "Importance of Communication in Society"
+              - "Elements of Communication"
+              - "Process of Communication"
+              - "Levels of Communication — Intrapersonal, Interpersonal, Group, Mass"
+          - unit: 2
+            title: "Models of Communication"
+            topics:
+              - "Linear Models of Communication"
+              - "Aristotle Model of Communication"
+              - "Lasswell Model of Communication"
+              - "Shannon and Weaver Model"
+              - "Berlo SMCR Model"
+              - "Osgood and Schramm Circular Model"
+              - "Westley and MacLean Model"
+              - "Dance Helical Model"
+              - "Gerbner General Model"
+          - unit: 3
+            title: "Types and Barriers of Communication"
+            topics:
+              - "Verbal Communication"
+              - "Non-Verbal Communication"
+              - "Written Communication"
+              - "Visual Communication"
+              - "Formal and Informal Communication"
+              - "Barriers to Effective Communication"
+              - "Overcoming Communication Barriers"
+          - unit: 4
+            title: "Mass Communication"
+            topics:
+              - "Meaning and Definition of Mass Communication"
+              - "Characteristics of Mass Communication"
+              - "Functions of Mass Communication"
+              - "Mass Media and Society"
+              - "Media and Culture"
+              - "Agenda Setting Theory"
+              - "Uses and Gratification Theory"
+          - unit: 5
+            title: "Communication in Indian Context"
+            topics:
+              - "Traditional Media in India"
+              - "Folk Media and Communication"
+              - "Communication and Development in India"
+              - "Media Scenario in Chhattisgarh"
+              - "Role of Communication in National Integration"
+              - "Communication Policy and Planning in India"
+
+      - paper_code: "MAMC-102"
+        paper_name: "Print Media: History and Development"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Origin and Growth of Press"
+            topics:
+              - "Invention of Printing Press by Gutenberg"
+              - "Origin of Newspapers in Europe"
+              - "Growth of Press in England"
+              - "Growth of Press in America"
+              - "World Press Trends"
+          - unit: 2
+            title: "History of Indian Press"
+            topics:
+              - "Beginning of Press in India — James Augustus Hicky"
+              - "Role of Press in Indian Independence Movement"
+              - "Raja Ram Mohan Roy and Press Freedom"
+              - "Bal Gangadhar Tilak and Nationalist Press"
+              - "Mahatma Gandhi and Journalism"
+              - "Press in Post-Independence India"
+          - unit: 3
+            title: "Hindi Journalism"
+            topics:
+              - "Evolution of Hindi Journalism"
+              - "Udant Martand — First Hindi Newspaper"
+              - "Bharatendu Harishchandra and Hindi Journalism"
+              - "Madhavrao Sapre and Chhattisgarh Hindi Press"
+              - "Contemporary Hindi Journalism"
+              - "Hindi Journalism in Chhattisgarh"
+          - unit: 4
+            title: "Press Laws and Ethics"
+            topics:
+              - "Freedom of Press in India — Article 19(1)(a)"
+              - "Press Council of India"
+              - "Press Laws — Defamation, Contempt of Court, Official Secrets Act"
+              - "Right to Information Act 2005"
+              - "Ethics in Journalism"
+              - "Press Commissions in India — First and Second"
+          - unit: 5
+            title: "Print Media Management"
+            topics:
+              - "Newspaper Organization and Management"
+              - "Editorial Department — Structure and Functions"
+              - "News Agencies in India — PTI, UNI, ANI"
+              - "Role of Editor, News Editor, Sub-Editor"
+              - "Circulation and Distribution of Newspapers"
+              - "Advertising Revenue and Print Economics"
+
+      - paper_code: "MAMC-103"
+        paper_name: "Reporting and Editing"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "News — Concept and Characteristics"
+            topics:
+              - "Meaning and Definition of News"
+              - "News Values and News Judgement"
+              - "Sources of News"
+              - "News Gathering Techniques"
+              - "Types of News — Hard News, Soft News, Breaking News"
+          - unit: 2
+            title: "Reporting"
+            topics:
+              - "Role and Qualities of a Reporter"
+              - "Beat Reporting — Crime, Political, Court, Sports"
+              - "Investigative Reporting"
+              - "Interview Techniques"
+              - "Press Conference and Press Release"
+              - "Reporting for Rural Areas"
+          - unit: 3
+            title: "News Writing"
+            topics:
+              - "Structure of a News Story — Inverted Pyramid"
+              - "Lead Writing — Types of Leads"
+              - "Five Ws and One H Principle"
+              - "Feature Writing"
+              - "Editorial Writing"
+              - "Column Writing"
+          - unit: 4
+            title: "Editing Principles"
+            topics:
+              - "Meaning and Importance of Editing"
+              - "Copy Editing and Proof Reading"
+              - "Headline Writing — Types and Principles"
+              - "Caption Writing"
+              - "Use of Photographs in Newspapers"
+              - "Page Layout and Makeup"
+          - unit: 5
+            title: "Practical Journalism"
+            topics:
+              - "Desk Work and News Desk Operations"
+              - "Sub-Editing Process"
+              - "Pagination and Desktop Publishing"
+              - "Magazine Journalism"
+              - "Online News Writing"
+              - "Media Convergence in Newsrooms"
+
+      - paper_code: "MAMC-104"
+        paper_name: "Media Laws and Ethics"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Constitutional Framework for Media"
+            topics:
+              - "Fundamental Rights and Freedom of Press"
+              - "Article 19(1)(a) — Freedom of Speech and Expression"
+              - "Reasonable Restrictions under Article 19(2)"
+              - "Right to Information Act 2005"
+              - "Freedom of Press — Indian and Global Perspectives"
+          - unit: 2
+            title: "Media Laws in India"
+            topics:
+              - "Law of Defamation — Civil and Criminal"
+              - "Contempt of Court Act 1971"
+              - "Official Secrets Act 1923"
+              - "Copyright Act 1957"
+              - "Information Technology Act 2000"
+              - "Cable Television Networks Regulation Act 1995"
+          - unit: 3
+            title: "Media Regulatory Bodies"
+            topics:
+              - "Press Council of India — Composition and Functions"
+              - "News Broadcasting Standards Authority (NBSA)"
+              - "Central Board of Film Certification (CBFC)"
+              - "Telecom Regulatory Authority of India (TRAI)"
+              - "Broadcasting Content Complaints Council (BCCC)"
+          - unit: 4
+            title: "Media Ethics"
+            topics:
+              - "Ethics and Morality in Journalism"
+              - "Codes of Conduct for Journalists"
+              - "Sensationalism and Yellow Journalism"
+              - "Paid News and Media Trial"
+              - "Privacy and Media Intrusion"
+              - "Ethical Dilemmas in Journalism"
+          - unit: 5
+            title: "International Media Law"
+            topics:
+              - "UNESCO and Freedom of Information"
+              - "New World Information and Communication Order (NWICO)"
+              - "MacBride Commission Report"
+              - "International Press Freedom Index"
+              - "Cross-Border Media Regulation"
+              - "Digital Rights and Cyber Laws"
+
+      - paper_code: "MAMC-105"
+        paper_name: "Media Research Methods"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Research"
+            topics:
+              - "Meaning and Definition of Research"
+              - "Types of Research — Basic, Applied, Descriptive, Analytical"
+              - "Scientific Method in Social Research"
+              - "Research Process and Steps"
+              - "Research Problem Formulation"
+          - unit: 2
+            title: "Research Design"
+            topics:
+              - "Hypothesis Formulation and Testing"
+              - "Variables — Independent, Dependent, Intervening"
+              - "Sampling Methods — Probability and Non-Probability"
+              - "Population and Sample Size"
+              - "Reliability and Validity in Research"
+          - unit: 3
+            title: "Data Collection Methods"
+            topics:
+              - "Survey Method and Questionnaire Design"
+              - "Interview Method — Structured and Unstructured"
+              - "Observation Method"
+              - "Content Analysis"
+              - "Case Study Method"
+              - "Focus Group Discussion"
+          - unit: 4
+            title: "Data Analysis"
+            topics:
+              - "Quantitative Data Analysis — Mean, Median, Mode"
+              - "Statistical Tools — Chi-Square, Correlation, Regression"
+              - "Qualitative Data Analysis"
+              - "Data Interpretation and Presentation"
+              - "Use of Tables, Graphs and Charts"
+          - unit: 5
+            title: "Research Report Writing"
+            topics:
+              - "Structure of a Research Report"
+              - "Review of Literature"
+              - "Citation and Referencing — APA, MLA"
+              - "Bibliography and Footnotes"
+              - "Ethics in Research"
+              - "Media Research in India — Trends and Issues"
+
+  # ===================== SEMESTER II =====================
+  - semester: 2
+    papers:
+      - paper_code: "MAMC-201"
+        paper_name: "Electronic Media: Radio and Television"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Electronic Media"
+            topics:
+              - "Meaning and Definition of Electronic Media"
+              - "History of Broadcasting in the World"
+              - "Evolution of Radio Broadcasting in India"
+              - "Evolution of Television Broadcasting in India"
+              - "Characteristics of Electronic Media"
+          - unit: 2
+            title: "Radio Broadcasting"
+            topics:
+              - "All India Radio (AIR) — History, Structure and Objectives"
+              - "Radio Programme Formats — News, Talks, Discussions, Features, Drama"
+              - "Community Radio in India"
+              - "FM Radio and Private Broadcasting"
+              - "Radio Script Writing"
+              - "Radio Production Process"
+          - unit: 3
+            title: "Television Broadcasting"
+            topics:
+              - "Doordarshan — History, Structure and Programming"
+              - "Satellite Television and Cable TV Revolution"
+              - "Television Programme Formats — News, Current Affairs, Entertainment"
+              - "Television News Production"
+              - "Television Script Writing"
+              - "Visual Grammar for Television"
+          - unit: 4
+            title: "Electronic Media Production"
+            topics:
+              - "Audio Recording Techniques"
+              - "Video Recording Techniques"
+              - "Camera Operations and Angles"
+              - "Lighting for Television"
+              - "Sound Recording and Mixing"
+              - "Video Editing — Linear and Non-Linear"
+          - unit: 5
+            title: "Electronic Media Regulation"
+            topics:
+              - "Prasar Bharati Act 1990"
+              - "Cable Television Networks Regulation Act 1995"
+              - "TRAI and Broadcasting Regulation"
+              - "Content Regulation in Electronic Media"
+              - "Electronic Media in Chhattisgarh"
+              - "Future of Electronic Media — OTT Platforms and Streaming"
+
+      - paper_code: "MAMC-202"
+        paper_name: "Development Communication"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Development Communication — Concepts and Approaches"
+            topics:
+              - "Meaning and Concept of Development Communication"
+              - "Process and Models of Development Communication"
+              - "Theories of Development Communication"
+              - "Problems and Issues of Development Communication"
+              - "Characteristics of Developing Societies"
+              - "Development Dichotomies"
+              - "Gap Between Developed, Developing and Under-developed Nations"
+          - unit: 2
+            title: "Theories of Development"
+            topics:
+              - "Modernization Theory of Development"
+              - "Dependency Theory of Development"
+              - "Participatory Communication Approach"
+              - "Diffusion of Innovation Theory — Everett Rogers"
+              - "Two-Step Flow Theory"
+              - "Social Marketing and Behaviour Change Communication"
+          - unit: 3
+            title: "Development Communication Strategies"
+            topics:
+              - "Role of Media in Development"
+              - "Media for Social Change"
+              - "Development Journalism"
+              - "Communication for Rural Development"
+              - "Health Communication"
+              - "Environmental Communication"
+              - "Education and Communication"
+          - unit: 4
+            title: "Development Communication in India"
+            topics:
+              - "Five Year Plans and Communication"
+              - "Government Communication Campaigns"
+              - "SITE — Satellite Instructional Television Experiment"
+              - "Kheda Communication Project"
+              - "Development Communication in Chhattisgarh"
+              - "Role of NGOs in Development Communication"
+          - unit: 5
+            title: "International Development Communication"
+            topics:
+              - "United Nations and Development Communication"
+              - "UNESCO Communication Programmes"
+              - "NWICO and MacBride Report"
+              - "Millennium Development Goals and SDGs"
+              - "ICT for Development (ICT4D)"
+              - "Global Media and Development"
+
+      - paper_code: "MAMC-203"
+        paper_name: "Advertising and Public Relations"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Advertising"
+            topics:
+              - "Meaning and Definition of Advertising"
+              - "History and Evolution of Advertising"
+              - "Types of Advertising — Product, Institutional, Classified, Display"
+              - "Functions and Objectives of Advertising"
+              - "Advertising and Society"
+          - unit: 2
+            title: "Advertising Planning and Strategy"
+            topics:
+              - "Advertising Campaign Planning"
+              - "Creative Strategy and Appeal"
+              - "Copy Writing — Headlines, Body Copy, Slogans"
+              - "Layout and Design in Advertising"
+              - "Media Planning and Buying"
+              - "AIDA Model in Advertising"
+          - unit: 3
+            title: "Advertising Media"
+            topics:
+              - "Print Media Advertising"
+              - "Electronic Media Advertising — Radio and TV"
+              - "Outdoor and Transit Advertising"
+              - "Digital and Social Media Advertising"
+              - "Advertising Agencies — Structure and Functions"
+              - "Advertising Standards Council of India (ASCI)"
+          - unit: 4
+            title: "Public Relations — Concepts"
+            topics:
+              - "Meaning and Definition of Public Relations"
+              - "History and Evolution of Public Relations"
+              - "Functions and Objectives of Public Relations"
+              - "Public Relations vs Advertising vs Publicity"
+              - "Tools of Public Relations — Press Release, Press Conference, Newsletter"
+              - "Corporate Communication"
+          - unit: 5
+            title: "Public Relations Practice"
+            topics:
+              - "Public Relations in Government"
+              - "Public Relations in Corporate Sector"
+              - "Crisis Communication and Management"
+              - "Event Management"
+              - "Corporate Social Responsibility (CSR)"
+              - "Public Relations in India"
+
+      - paper_code: "MAMC-204"
+        paper_name: "New Media and Information Technology"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to New Media"
+            topics:
+              - "Meaning and Definition of New Media"
+              - "Characteristics of New Media — Interactivity, Convergence, Multimedia"
+              - "Evolution of Internet"
+              - "Web 1.0, Web 2.0, Web 3.0"
+              - "Digital Divide"
+          - unit: 2
+            title: "Internet and Online Journalism"
+            topics:
+              - "Online Journalism — Features and Practices"
+              - "News Portals and Web Publishing"
+              - "Blogging and Citizen Journalism"
+              - "Podcast and Web Radio"
+              - "Data Journalism"
+              - "Mobile Journalism (MoJo)"
+          - unit: 3
+            title: "Social Media"
+            topics:
+              - "Social Media Platforms — Facebook, Twitter, YouTube, Instagram"
+              - "Social Media and Journalism"
+              - "Social Media Marketing"
+              - "Fake News and Misinformation"
+              - "Social Media Ethics"
+              - "Social Media Influencers"
+          - unit: 4
+            title: "Information Technology in Media"
+            topics:
+              - "Computer Basics and Operating Systems"
+              - "Desktop Publishing (DTP)"
+              - "Content Management Systems"
+              - "Multimedia Production — Audio, Video, Graphics"
+              - "Website Design and Development"
+              - "Search Engine Optimization (SEO)"
+          - unit: 5
+            title: "Cyber Laws and Digital Rights"
+            topics:
+              - "Information Technology Act 2000 and Amendments"
+              - "Cyber Crime — Types and Prevention"
+              - "Digital Privacy and Data Protection"
+              - "Intellectual Property Rights in Digital Media"
+              - "E-Governance in India"
+              - "Artificial Intelligence and Media"
+
+      - paper_code: "MAMC-205"
+        paper_name: "Photography and Visual Communication"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Photography"
+            topics:
+              - "History and Evolution of Photography"
+              - "Camera Types — DSLR, Mirrorless, Mobile Photography"
+              - "Parts of a Camera and Their Functions"
+              - "Exposure Triangle — Aperture, Shutter Speed, ISO"
+              - "Types of Lenses and Their Uses"
+          - unit: 2
+            title: "Photography Techniques"
+            topics:
+              - "Composition Rules — Rule of Thirds, Leading Lines, Framing"
+              - "Lighting in Photography — Natural and Artificial"
+              - "Depth of Field"
+              - "White Balance and Colour Temperature"
+              - "Focus Techniques — Manual and Auto Focus"
+          - unit: 3
+            title: "Types of Photography"
+            topics:
+              - "News and Press Photography"
+              - "Photo Journalism and Photo Essay"
+              - "Portrait Photography"
+              - "Documentary Photography"
+              - "Sports Photography"
+              - "Wildlife and Nature Photography"
+          - unit: 4
+            title: "Digital Photography and Editing"
+            topics:
+              - "Digital Image Formats — JPEG, RAW, TIFF, PNG"
+              - "Image Editing Software — Adobe Photoshop, Lightroom"
+              - "Photo Manipulation Ethics"
+              - "Colour Correction and Enhancement"
+              - "Photo Archiving and Management"
+          - unit: 5
+            title: "Visual Communication"
+            topics:
+              - "Meaning and Importance of Visual Communication"
+              - "Visual Literacy"
+              - "Semiotics and Signs in Visual Communication"
+              - "Infographics and Data Visualization"
+              - "Graphic Design Principles"
+              - "Visual Storytelling in Media"
+
+  # ===================== SEMESTER III =====================
+  - semester: 3
+    papers:
+      - paper_code: "MAMC-301"
+        paper_name: "Media Management and Economics"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Media Management — Concepts"
+            topics:
+              - "Meaning and Definition of Media Management"
+              - "Principles of Management Applied to Media"
+              - "Media Organization — Structure and Functions"
+              - "Human Resource Management in Media"
+              - "Leadership and Decision Making in Media"
+          - unit: 2
+            title: "Media Economics"
+            topics:
+              - "Economics of Media Industry"
+              - "Ownership Patterns in Indian Media"
+              - "Media Monopoly and Cross-Media Ownership"
+              - "Revenue Models — Advertising, Subscription, Paywall"
+              - "Market Competition and Media Consolidation"
+          - unit: 3
+            title: "Print Media Management"
+            topics:
+              - "Newspaper Management and Administration"
+              - "Circulation Management"
+              - "Advertising Revenue Management"
+              - "Production and Distribution Planning"
+              - "ABC and DAVP"
+          - unit: 4
+            title: "Electronic Media Management"
+            topics:
+              - "Television Channel Management"
+              - "Radio Station Management"
+              - "Programming Strategy and Scheduling"
+              - "TRP and Audience Measurement"
+              - "Content Acquisition and Licensing"
+          - unit: 5
+            title: "Digital Media Management"
+            topics:
+              - "Online News Business Models"
+              - "Social Media Management and Analytics"
+              - "Digital Marketing for Media"
+              - "Media Entrepreneurship"
+              - "Media Management in Chhattisgarh"
+              - "Future Trends in Media Business"
+
+      - paper_code: "MAMC-302"
+        paper_name: "Film Studies and Documentary"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Cinema"
+            topics:
+              - "History of World Cinema"
+              - "Invention of Motion Picture — Lumiere Brothers, Edison"
+              - "Silent Era to Talkies"
+              - "Cinema as a Mass Medium"
+              - "Film Appreciation — Language and Grammar of Cinema"
+          - unit: 2
+            title: "Indian Cinema"
+            topics:
+              - "History of Indian Cinema — Dadasaheb Phalke to Modern Era"
+              - "Indian New Wave Cinema — Parallel Cinema Movement"
+              - "Bollywood — Commercial Hindi Cinema"
+              - "Regional Cinema in India"
+              - "Chhattisgarhi Cinema — Origin and Growth"
+          - unit: 3
+            title: "Film Production"
+            topics:
+              - "Pre-Production — Script, Screenplay, Storyboard"
+              - "Production — Direction, Cinematography, Acting"
+              - "Post-Production — Editing, Sound Design, VFX"
+              - "Film Genres — Drama, Comedy, Thriller, Documentary"
+              - "Film Distribution and Exhibition"
+          - unit: 4
+            title: "Documentary Film"
+            topics:
+              - "History and Evolution of Documentary"
+              - "Types of Documentary — Expository, Observational, Participatory"
+              - "Documentary vs Fiction Film"
+              - "Documentary Script Writing"
+              - "Documentary Filmmakers — Indian and International"
+          - unit: 5
+            title: "Film Censorship and Industry"
+            topics:
+              - "Central Board of Film Certification (CBFC)"
+              - "Film Censorship Controversies in India"
+              - "Film Industry Economics"
+              - "Film Festivals — National and International"
+              - "OTT Platforms and Changing Film Distribution"
+              - "Film Criticism and Review Writing"
+
+      - paper_code: "MAMC-303"
+        paper_name: "International Communication"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "International Communication — Concepts"
+            topics:
+              - "Meaning and Definition of International Communication"
+              - "Scope and Importance of International Communication"
+              - "International Information Flow"
+              - "Global Village Concept — Marshall McLuhan"
+              - "Cultural Imperialism"
+          - unit: 2
+            title: "International Media Systems"
+            topics:
+              - "Authoritarian Media Theory"
+              - "Libertarian Media Theory"
+              - "Social Responsibility Theory"
+              - "Soviet Communist Media Theory"
+              - "Development Media Theory"
+              - "Democratic Participant Theory"
+          - unit: 3
+            title: "International Media Organizations"
+            topics:
+              - "UNESCO and Communication"
+              - "International Telecommunication Union (ITU)"
+              - "World Trade Organization and Media"
+              - "International News Agencies — Reuters, AP, AFP"
+              - "Global Media Conglomerates"
+          - unit: 4
+            title: "Debates in International Communication"
+            topics:
+              - "New World Information and Communication Order (NWICO)"
+              - "MacBride Commission and Its Report"
+              - "Free Flow of Information Debate"
+              - "Information Sovereignty"
+              - "Digital Colonialism"
+          - unit: 5
+            title: "Global Media Trends"
+            topics:
+              - "Globalization and Media"
+              - "Transnational Broadcasting — BBC, CNN, Al Jazeera"
+              - "Soft Power and Media Diplomacy"
+              - "Global Journalism Ethics"
+              - "Indian Media in Global Context"
+              - "International Communication Issues and India"
+
+      - paper_code: "MAMC-304"
+        paper_name: "Media and Society"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Media and Social Structure"
+            topics:
+              - "Relationship Between Media and Society"
+              - "Media as a Social Institution"
+              - "Socialization Role of Media"
+              - "Media and Public Opinion"
+              - "Media and Democracy"
+          - unit: 2
+            title: "Media Effects"
+            topics:
+              - "Media Effects Theories — Hypodermic Needle, Limited Effects"
+              - "Cultivation Theory — George Gerbner"
+              - "Spiral of Silence — Elisabeth Noelle-Neumann"
+              - "Framing Theory"
+              - "Agenda Setting Theory — Detailed Study"
+          - unit: 3
+            title: "Media and Gender"
+            topics:
+              - "Representation of Women in Media"
+              - "Gender Stereotypes in Media Content"
+              - "Women in Media Profession"
+              - "Media and Women Empowerment"
+              - "Sexual Harassment Laws and Media"
+              - "Feminist Media Studies"
+          - unit: 4
+            title: "Media and Marginalized Sections"
+            topics:
+              - "Media Representation of Dalits and Tribals"
+              - "Media and Minority Communities"
+              - "Media and Children"
+              - "Media and Disability"
+              - "Media and Rural India"
+              - "Media Representation in Chhattisgarh"
+          - unit: 5
+            title: "Media and Contemporary Issues"
+            topics:
+              - "Media and Communalism"
+              - "Media and Terrorism"
+              - "Media and Environment"
+              - "Media and Consumer Culture"
+              - "Media Literacy and Critical Thinking"
+              - "Social Media and Society"
+
+      - paper_code: "MAMC-305"
+        paper_name: "Practical: Media Production Lab"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Radio Production Practical"
+            topics:
+              - "Radio Script Writing Practice"
+              - "Radio News Bulletin Preparation"
+              - "Radio Interview Recording"
+              - "Radio Feature Production"
+              - "Community Radio Programme"
+          - unit: 2
+            title: "Television Production Practical"
+            topics:
+              - "Television News Script Writing"
+              - "Television News Bulletin Production"
+              - "Television Interview and Panel Discussion"
+              - "Television Feature and Documentary"
+              - "Studio Floor Operations"
+          - unit: 3
+            title: "Print Production Practical"
+            topics:
+              - "News Reporting and Story Writing"
+              - "Feature Article Writing"
+              - "Editorial and Opinion Writing"
+              - "Page Layout Design Using DTP"
+              - "Magazine Production"
+          - unit: 4
+            title: "Digital Media Practical"
+            topics:
+              - "Blog Writing and Web Publishing"
+              - "Social Media Content Creation"
+              - "Podcast Production"
+              - "Video Journalism for Web"
+              - "Infographic Design"
+          - unit: 5
+            title: "Photography Practical"
+            topics:
+              - "News and Event Photography"
+              - "Portrait and Feature Photography"
+              - "Photo Editing Using Adobe Photoshop"
+              - "Photo Essay and Photo Story"
+              - "Mobile Photography Techniques"
+
+  # ===================== SEMESTER IV =====================
+  - semester: 4
+    papers:
+      - paper_code: "MAMC-401"
+        paper_name: "Media and Cultural Studies"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Cultural Studies"
+            topics:
+              - "Meaning and Definition of Culture"
+              - "Culture and Communication"
+              - "Popular Culture and Mass Culture"
+              - "High Culture vs Low Culture Debate"
+              - "Cultural Studies — Origin and Development"
+          - unit: 2
+            title: "Theoretical Perspectives"
+            topics:
+              - "Frankfurt School and Critical Theory"
+              - "Birmingham School of Cultural Studies"
+              - "Stuart Hall — Encoding and Decoding"
+              - "Antonio Gramsci — Hegemony Theory"
+              - "Post-Modernism and Media"
+          - unit: 3
+            title: "Media and Indian Culture"
+            topics:
+              - "Media and Indian Cultural Identity"
+              - "Representation of Indian Culture in Bollywood"
+              - "Television and Cultural Change in India"
+              - "Western Cultural Influence Through Media"
+              - "Cultural Diversity and Media in India"
+          - unit: 4
+            title: "Media and Chhattisgarhi Culture"
+            topics:
+              - "Chhattisgarhi Folk Culture and Media"
+              - "Traditional Communication Forms in Chhattisgarh"
+              - "Chhattisgarhi Language and Media"
+              - "Tribal Culture and Media Representation"
+              - "Cultural Heritage Preservation Through Media"
+          - unit: 5
+            title: "Global Media Culture"
+            topics:
+              - "Globalization and Cultural Homogenization"
+              - "Media and Consumerism"
+              - "Cultural Imperialism and Media"
+              - "Intercultural Communication"
+              - "Digital Culture and New Media"
+              - "Media Literacy for Cultural Awareness"
+
+      - paper_code: "MAMC-402"
+        paper_name: "Corporate Communication and CSR"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Corporate Communication — Concepts"
+            topics:
+              - "Meaning and Definition of Corporate Communication"
+              - "Scope and Functions of Corporate Communication"
+              - "Corporate Image and Identity"
+              - "Internal Communication"
+              - "External Communication"
+          - unit: 2
+            title: "Corporate Communication Tools"
+            topics:
+              - "Corporate Advertising"
+              - "Corporate Publications — Annual Reports, Newsletters"
+              - "Corporate Website and Social Media Presence"
+              - "Media Relations for Corporates"
+              - "Investor Relations and Financial Communication"
+          - unit: 3
+            title: "Corporate Social Responsibility"
+            topics:
+              - "Meaning and Definition of CSR"
+              - "CSR in India — Section 135 of Companies Act 2013"
+              - "CSR Communication Strategies"
+              - "CSR Reporting and Sustainability"
+              - "Best CSR Practices in India"
+          - unit: 4
+            title: "Crisis Communication"
+            topics:
+              - "Meaning and Types of Organizational Crisis"
+              - "Crisis Communication Planning"
+              - "Crisis Response Strategies"
+              - "Role of Media During Crisis"
+              - "Case Studies in Crisis Communication"
+          - unit: 5
+            title: "Brand Communication"
+            topics:
+              - "Brand Building and Brand Equity"
+              - "Brand Communication Strategies"
+              - "Digital Branding"
+              - "Integrated Marketing Communication (IMC)"
+              - "Corporate Communication in Indian Context"
+              - "Corporate Communication in Chhattisgarh"
+
+      - paper_code: "MAMC-403"
+        paper_name: "Media Criticism and Analysis"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Introduction to Media Criticism"
+            topics:
+              - "Meaning and Purpose of Media Criticism"
+              - "Media Criticism vs Media Studies"
+              - "Approaches to Media Criticism"
+              - "Role of Media Critic"
+              - "Media Criticism in India"
+          - unit: 2
+            title: "Content Analysis"
+            topics:
+              - "Quantitative Content Analysis"
+              - "Qualitative Content Analysis"
+              - "Discourse Analysis"
+              - "Textual Analysis"
+              - "Narrative Analysis"
+          - unit: 3
+            title: "Critical Analysis of Print Media"
+            topics:
+              - "Newspaper Content Analysis"
+              - "Magazine Content Analysis"
+              - "Editorial Analysis"
+              - "Bias and Objectivity in Print Media"
+              - "Ownership Influence on Content"
+          - unit: 4
+            title: "Critical Analysis of Electronic and Digital Media"
+            topics:
+              - "Television News Analysis"
+              - "Radio Content Analysis"
+              - "Film Criticism and Review"
+              - "Social Media Content Analysis"
+              - "Fake News Detection and Fact-Checking"
+          - unit: 5
+            title: "Media Literacy and Critical Thinking"
+            topics:
+              - "Media Literacy — Concepts and Framework"
+              - "Teaching Media Literacy"
+              - "Critical Thinking Skills for Media Consumers"
+              - "Media Education in India"
+              - "Audience Reception Studies"
+              - "Media Accountability Systems"
+
+      - paper_code: "MAMC-404"
+        paper_name: "Dissertation / Project Work"
+        course_type: "CC"
+        max_marks: 200
+        pass_marks: 72
+        units:
+          - unit: 1
+            title: "Research Proposal"
+            topics:
+              - "Selection of Research Topic"
+              - "Literature Review Writing"
+              - "Research Objectives and Questions"
+              - "Research Methodology Design"
+              - "Research Proposal Presentation"
+          - unit: 2
+            title: "Data Collection"
+            topics:
+              - "Primary Data Collection"
+              - "Secondary Data Collection"
+              - "Survey and Questionnaire Administration"
+              - "Interview and Case Study Conduct"
+              - "Field Work and Documentation"
+          - unit: 3
+            title: "Data Analysis and Interpretation"
+            topics:
+              - "Data Coding and Tabulation"
+              - "Statistical Analysis"
+              - "Qualitative Data Interpretation"
+              - "Findings and Discussion"
+              - "Limitations of the Study"
+          - unit: 4
+            title: "Dissertation Writing"
+            topics:
+              - "Dissertation Structure and Format"
+              - "Chapter Writing"
+              - "Conclusion and Recommendations"
+              - "Abstract Writing"
+              - "Plagiarism Check and Academic Integrity"
+          - unit: 5
+            title: "Dissertation Presentation"
+            topics:
+              - "Viva-Voce Preparation"
+              - "Presentation Skills"
+              - "Defense of Research Findings"
+              - "Publication of Research"
+              - "Research Ethics and Responsibility"
+
+      - paper_code: "MAMC-405"
+        paper_name: "Internship and Field Training"
+        course_type: "CC"
+        max_marks: 100
+        pass_marks: 36
+        units:
+          - unit: 1
+            title: "Internship Planning"
+            topics:
+              - "Understanding Internship Objectives"
+              - "Choosing an Appropriate Media Organization"
+              - "Internship Application and Resume Preparation"
+              - "Internship Work Plan"
+              - "Professional Ethics During Internship"
+          - unit: 2
+            title: "Print Media Internship"
+            topics:
+              - "Working in a Newspaper Newsroom"
+              - "Reporting and Writing Assignments"
+              - "Sub-Editing and Page Layout Work"
+              - "Understanding Editorial Workflow"
+              - "Print Media Industry Exposure"
+          - unit: 3
+            title: "Electronic Media Internship"
+            topics:
+              - "Television Newsroom Experience"
+              - "Radio Station Operations"
+              - "News Anchoring and Presentation"
+              - "Field Reporting for TV and Radio"
+              - "Production and Post-Production Work"
+          - unit: 4
+            title: "Digital Media Internship"
+            topics:
+              - "Online Newsroom Operations"
+              - "Social Media Management in Organizations"
+              - "Content Creation for Digital Platforms"
+              - "Digital Marketing and PR Internship"
+              - "Data Journalism Practice"
+          - unit: 5
+            title: "Internship Evaluation"
+            topics:
+              - "Internship Report Writing"
+              - "Portfolio Compilation"
+              - "Self-Assessment and Reflection"
+              - "Supervisor Evaluation and Feedback"
+              - "Presentation of Internship Experience"

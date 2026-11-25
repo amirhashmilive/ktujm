@@ -1,0 +1,147 @@
+---
+// src/pages/courses/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TentativeNotice from '../../components/TentativeNotice.astro';
+
+const breadcrumbs = [{ label: 'Courses' }];
+
+const coursesList = [
+  {
+    code: 'MAMC',
+    name: 'Master of Arts (Mass Communication)',
+    ordinance: 'Ordinance No. 08',
+    department: 'Department of Mass Communication',
+    semesters: 4,
+    papers: 20,
+    status: 'published',
+    href: '/ktujm/courses/mamc/',
+    desc: 'Flagship media programme covering communication theory, print, electronic, new media, research methods, and media management. Fully mapped with 554 topic stubs.'
+  },
+  {
+    code: 'MJ',
+    name: 'Master of Journalism',
+    ordinance: 'Ordinance No. 1[A]',
+    department: 'Department of Journalism',
+    semesters: 4,
+    papers: 20,
+    status: 'draft',
+    href: '#',
+    desc: 'Advanced training in reporting, editing, investigative journalism, desk management, and media ethics in Hindi/English.'
+  },
+  {
+    code: 'MA-APR',
+    name: 'Master of Arts (Advertising & Public Relations)',
+    ordinance: 'Ordinance No. 1[B]',
+    department: 'Department of Public Relations & Advertising',
+    semesters: 4,
+    papers: 20,
+    status: 'draft',
+    href: '#',
+    desc: 'Creative copy writing, campaign planning, corporate communication, PR crisis response, and digital branding.'
+  },
+  {
+    code: 'MSW',
+    name: 'Master of Social Work',
+    ordinance: 'Ordinance No. 21',
+    department: 'Department of Social Work',
+    semesters: 4,
+    papers: 20,
+    status: 'draft',
+    href: '#',
+    desc: 'Community mobilization, tribal empowerment in Chhattisgarh, child welfare, NGO management, and legal rights.'
+  },
+  {
+    code: 'M.Sc-EM',
+    name: 'M.Sc / MA in Electronic Media',
+    ordinance: 'Ordinance No. 26',
+    department: 'Department of Electronic Media',
+    semesters: 4,
+    papers: 20,
+    status: 'draft',
+    href: '#',
+    desc: 'Radio broadcasting, multi-camera television studio production, sound engineering, linear/non-linear video editing.'
+  },
+  {
+    code: 'MBA-MM',
+    name: 'MBA (Media Management)',
+    ordinance: 'Ordinance No. 13',
+    department: 'Department of Management',
+    semesters: 4,
+    papers: 20,
+    status: 'draft',
+    href: '#',
+    desc: 'Media economics, newspaper circulation models, TV ratings points (TRP), digital advertising monetization, and entrepreneurship.'
+  },
+  {
+    code: 'BA-MC',
+    name: 'BA (Journalism & Mass Communication)',
+    ordinance: 'Ordinance No. 1[C] & 51',
+    department: 'Undergraduate Programmes & Affiliated Colleges',
+    semesters: 8,
+    papers: 40,
+    status: 'draft',
+    href: '#',
+    desc: 'Four-year NEP 2020 undergraduate degree taught in university departments and 9 affiliated colleges across Chhattisgarh.'
+  },
+  {
+    code: 'Ph.D.',
+    name: 'Doctor of Philosophy (Media Studies & Journalism)',
+    ordinance: 'Ordinance No. 14 (Revised)',
+    department: 'Research Advisory Committee (RAC)',
+    semesters: 'Coursework + Research',
+    papers: 'Pre-Ph.D.',
+    status: 'draft',
+    href: '#',
+    desc: 'Advanced research methodology, quantitative and qualitative paradigms, academic writing, and thesis supervision regulations.'
+  }
+];
+---
+
+<BaseLayout title="All Academic Courses & Notes" breadcrumbs={breadcrumbs}>
+  <h1>Academic Courses & Notes Catalog</h1>
+  <p style="color: var(--color-text-muted); margin-bottom: 24px;">
+    Browse open-access academic notes, unit breakdown, and exam questions across all major departments.
+  </p>
+
+  <TentativeNotice officialUrl="https://www.ktujm.ac.in/ordinance.htm" />
+
+  <div style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
+    <button style="background: var(--color-primary); color: #fff; border: none; padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer;">All Courses</button>
+    <button style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer;">Postgraduate</button>
+    <button style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer;">Undergraduate</button>
+    <button style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer;">Ph.D. & Research</button>
+  </div>
+
+  <div class="card-grid">
+    {coursesList.map((c) => (
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+          <h3 style="margin: 0; font-size: 18px;">
+            {c.status === 'published' ? (
+              <a href={c.href}>{c.code}</a>
+            ) : (
+              <span>{c.code}</span>
+            )}
+          </h3>
+          <span class={`badge badge-${c.status}`}>
+            {c.status === 'published' ? 'Active' : 'Phase 2'}
+          </span>
+        </div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--color-text); margin-bottom: 4px;">
+          {c.name}
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-muted); margin-bottom: 12px;">
+          🏛️ {c.department} • 📜 {c.ordinance}
+        </div>
+        <p style="font-size: 13px; color: var(--color-text-muted); margin-bottom: 16px;">
+          {c.desc}
+        </p>
+        {c.status === 'published' ? (
+          <a href={c.href} style="font-weight: 600; font-size: 14px;">Open Course Repository &rarr;</a>
+        ) : (
+          <span style="font-size: 13px; color: var(--color-text-muted);">Syllabus mapping scheduled for next term</span>
+        )}
+      </div>
+    ))}
+  </div>
+</BaseLayout>

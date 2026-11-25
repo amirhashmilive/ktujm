@@ -1,0 +1,33 @@
+---
+// src/pages/marketplace.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbs = [{ label: 'Marketplace' }];
+---
+
+<BaseLayout title="Student Marketplace & Commons" breadcrumbs={breadcrumbs}>
+  <h1>Student Marketplace & Commons</h1>
+  <p style="color: var(--color-text-muted); font-size: 16px; margin-bottom: 24px;">
+    Peer-to-peer academic textbook exchange, gear rentals, and lost-and-found notice board.
+  </p>
+
+  <div class="placeholder-box" style="margin-bottom: 32px;">
+    <h2>🛒 Peer Student Marketplace Coming in Phase 3</h2>
+    <p style="max-width: 600px; margin: 8px auto 0; font-size: 14px;">
+      A non-commercial student trade board where graduating scholars can pass down textbooks, donate study reference notes, and coordinate camera equipment sharing for student film projects.
+    </p>
+    <span class="phase-label">Phase 3: Student Commons</span>
+  </div>
+
+  <section style="margin-bottom: 32px;">
+    <h2>Marketplace Code of Conduct & Policies</h2>
+    <div class="card" style="border-left: 4px solid var(--color-primary-light);">
+      <h3 style="margin-top: 0;">Non-Commercial Community Standards</h3>
+      <ul style="font-size: 14px; margin-left: 20px; line-height: 1.7;">
+        <li><strong>Free / Cost-Recovery Only:</strong> Designed exclusively for textbook swaps, low-cost second-hand media books, and study material sharing. Commercial advertisements and third-party promotions are barred.</li>
+        <li><strong>Lost & Found Board:</strong> An open directory to help students report and recover lost ID cards, notebooks, and equipment across campus buildings.</li>
+        <li><strong>Zero Middleman Fees:</strong> KTUJM Scholars does not process payments or charge commission. All exchanges happen directly between enrolled students.</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

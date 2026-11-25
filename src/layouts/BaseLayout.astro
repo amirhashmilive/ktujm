@@ -1,0 +1,71 @@
+---
+// src/layouts/BaseLayout.astro
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs, { type BreadcrumbItem } from '../components/Breadcrumbs.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  breadcrumbs?: BreadcrumbItem[];
+}
+
+const {
+  title,
+  description = 'KTUJM Scholars — Free, unofficial academic notes repository and student-life hub governed by Ph.D. scholars.',
+  breadcrumbs = [],
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | KTUJM Scholars</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/ktujm/favicon.svg" />
+    <!-- Pagefind integration -->
+    <link href="/ktujm/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <script src="/ktujm/pagefind/pagefind-ui.js" is:inline></script>
+  </head>
+  <body>
+    <Header />
+
+    {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
+
+    <!-- Search Results Container (Hidden until user types) -->
+    <div id="search-modal" style="display: none; max-width: 1100px; margin: 0 auto; padding: 20px;">
+      <div id="search" style="background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;"></div>
+    </div>
+
+    <main class="main-content" data-pagefind-body>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script is:inline>
+      window.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('pagefind-search-input');
+        const searchModal = document.getElementById('search-modal');
+        let pagefindLoaded = false;
+
+        if (searchInput && searchModal) {
+          searchInput.addEventListener('focus', () => {
+            searchModal.style.display = 'block';
+            if (!pagefindLoaded && window.PagefindUI) {
+              new PagefindUI({
+                element: '#search',
+                showSubResults: true,
+                baseUrl: '/ktujm/'
+              });
+              pagefindLoaded = true;
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

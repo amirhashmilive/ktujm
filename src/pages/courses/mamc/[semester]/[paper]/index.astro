@@ -1,0 +1,120 @@
+---
+// src/pages/courses/mamc/[semester]/[paper]/index.astro
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import TentativeNotice from '../../../../../components/TentativeNotice.astro';
+import DraftBadge from '../../../../../components/DraftBadge.astro';
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
+
+export async function getStaticPaths() {
+  const yamlPath = path.resolve('content/syllabus/mamc.yaml');
+  const syllabusData = yaml.load(fs.readFileSync(yamlPath, 'utf-8')) as any;
+
+  function slugify(text: string) {
+    return text
+      .toLowerCase()
+      .replace(/['']/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .substring(0, 80);
+  }
+
+  const paths: any[] = [];
+
+  for (const sem of syllabusData.semesters) {
+    for (const paper of sem.papers) {
+      const unitsWithSlugs = paper.units.map((u: any) => ({
+        ...u,
+        topicObjects: u.topics.map((t: string) => ({
+          title: t,
+          slug: slugify(t),
+        })),
+      }));
+
+      paths.push({
+        params: {
+          semester: `sem-${sem.semester}`,
+          paper: paper.paper_code.toLowerCase(),
+        },
+        props: {
+          semNumber: sem.semester,
+          paperCode: paper.paper_code,
+          paperName: paper.paper_name,
+          courseType: paper.course_type,
+          maxMarks: paper.max_marks,
+          passMarks: paper.pass_marks,
+          units: unitsWithSlugs,
+          officialUrl: syllabusData.official_syllabus_url,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const {
+  semNumber,
+  paperCode,
+  paperName,
+  courseType,
+  maxMarks,
+  passMarks,
+  units,
+  officialUrl,
+} = Astro.props;
+
+const breadcrumbs = [
+  { label: 'Courses', href: '/ktujm/courses/' },
+  { label: 'MAMC', href: '/ktujm/courses/mamc/' },
+  { label: `Semester ${semNumber}`, href: '/ktujm/courses/mamc/' },
+  { label: paperCode },
+];
+---
+
+<BaseLayout title={`${paperCode}: ${paperName}`} breadcrumbs={breadcrumbs}>
+  <div style="margin-bottom: 20px;">
+    <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+      <span class="badge badge-published">Semester {semNumber}</span>
+      <span class="badge badge-review">{courseType}</span>
+    </div>
+    <h1>{paperCode}: {paperName}</h1>
+    <p style="color: var(--color-text-muted); font-size: 15px;">
+      Master of Arts (Mass Communication) • Maximum Marks: {maxMarks} • Minimum Pass Marks: {passMarks}
+    </p>
+  </div>
+
+  <TentativeNotice officialUrl={officialUrl} />
+
+  <div style="display: flex; justify-content: space-between; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; gap: 12px;">
+    <h2>Units & Topic Outline ({units.reduce((acc: number, u: any) => acc + u.topicObjects.length, 0)} Total Topics)</h2>
+    <a href={officialUrl} target="_blank" rel="noopener noreferrer" style="font-size: 13px; font-weight: 600;">
+      Official Ordinance Syllabus PDF ↗
+    </a>
+  </div>
+
+  {units.map((unit: any) => (
+    <div class="card" style="margin-bottom: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-border); padding-bottom: 8px; margin-bottom: 12px;">
+        <h3 style="margin: 0; font-size: 17px; color: var(--color-primary);">
+          Unit {unit.unit}: {unit.title}
+        </h3>
+        <span style="font-size: 12px; color: var(--color-text-muted);">
+          {unit.topicObjects.length} Topics
+        </span>
+      </div>
+
+      <ul class="topic-list">
+        {unit.topicObjects.map((topic: any) => (
+          <li>
+            <a href={`/ktujm/courses/mamc/sem-${semNumber}/${paperCode.toLowerCase()}/unit-${unit.unit}/${topic.slug}/`}>
+              <strong>{topic.title}</strong>
+            </a>
+            <DraftBadge status="draft" />
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</BaseLayout>

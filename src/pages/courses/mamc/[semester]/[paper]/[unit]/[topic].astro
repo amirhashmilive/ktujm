@@ -1,0 +1,139 @@
+---
+// src/pages/courses/mamc/[semester]/[paper]/[unit]/[topic].astro
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import TentativeNotice from '../../../../../../components/TentativeNotice.astro';
+import DraftBadge from '../../../../../../components/DraftBadge.astro';
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
+
+export async function getStaticPaths() {
+  const yamlPath = path.resolve('content/syllabus/mamc.yaml');
+  const syllabusData = yaml.load(fs.readFileSync(yamlPath, 'utf-8')) as any;
+
+  function slugify(text: string) {
+    return text
+      .toLowerCase()
+      .replace(/['']/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .substring(0, 80);
+  }
+
+  const paths: any[] = [];
+
+  for (const sem of syllabusData.semesters) {
+    for (const paper of sem.papers) {
+      for (const unit of paper.units) {
+        for (const topic of unit.topics) {
+          const tSlug = slugify(topic);
+
+          // Read the markdown file content if exists
+          const notePath = path.resolve(
+            `content/notes/mamc/sem-${sem.semester}/${paper.paper_code.toLowerCase()}/unit-${unit.unit}/${tSlug}.md`
+          );
+
+          let markdownBody = '';
+          if (fs.existsSync(notePath)) {
+            const raw = fs.readFileSync(notePath, 'utf-8');
+            // Strip frontmatter and stub comment
+            markdownBody = raw
+              .replace(/^---[\s\S]*?---\n/, '')
+              .replace(/<!-- STUB:AUTO-GENERATED -->\n?/, '')
+              .trim();
+          }
+
+          paths.push({
+            params: {
+              semester: `sem-${sem.semester}`,
+              paper: paper.paper_code.toLowerCase(),
+              unit: `unit-${unit.unit}`,
+              topic: tSlug,
+            },
+            props: {
+              semNumber: sem.semester,
+              paperCode: paper.paper_code,
+              paperName: paper.paper_name,
+              unitNumber: unit.unit,
+              unitTitle: unit.title,
+              topicTitle: topic,
+              topicSlug: tSlug,
+              markdownBody: markdownBody,
+              officialUrl: syllabusData.official_syllabus_url,
+            },
+          });
+        }
+      }
+    }
+  }
+
+  return paths;
+}
+
+const {
+  semNumber,
+  paperCode,
+  paperName,
+  unitNumber,
+  unitTitle,
+  topicTitle,
+  topicSlug,
+  markdownBody,
+  officialUrl,
+} = Astro.props;
+
+const breadcrumbs = [
+  { label: 'Courses', href: '/ktujm/courses/' },
+  { label: 'MAMC', href: '/ktujm/courses/mamc/' },
+  { label: `Sem ${semNumber}`, href: '/ktujm/courses/mamc/' },
+  { label: paperCode, href: `/ktujm/courses/mamc/sem-${semNumber}/${paperCode.toLowerCase()}/` },
+  { label: `Unit ${unitNumber}`, href: `/ktujm/courses/mamc/sem-${semNumber}/${paperCode.toLowerCase()}/` },
+  { label: topicTitle },
+];
+---
+
+<BaseLayout title={`${topicTitle} — ${paperCode}`} breadcrumbs={breadcrumbs}>
+  <article>
+    <header style="margin-bottom: 24px;">
+      <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px; flex-wrap: wrap;">
+        <span class="badge badge-published">Semester {semNumber}</span>
+        <span class="badge badge-review">{paperCode}</span>
+        <span class="badge" style="background: #e2e8f0; color: #4a5568;">Unit {unitNumber}</span>
+        <DraftBadge status="draft" />
+      </div>
+      <h1 style="font-size: 28px; line-height: 1.3; margin-bottom: 8px;">{topicTitle}</h1>
+      <p style="color: var(--color-text-muted); font-size: 14px;">
+        {paperCode}: {paperName} • Unit {unitNumber}: {unitTitle}
+      </p>
+    </header>
+
+    <TentativeNotice officialUrl={officialUrl} />
+
+    <!-- Editorial contributor callout -->
+    <div style="background: #fffaf0; border: 1px solid #feebc8; border-radius: var(--radius); padding: 12px 16px; margin: 20px 0; font-size: 13px; color: #7b341e; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 12px;">
+      <div>
+        📝 <strong>Stub Note:</strong> This topic is awaiting complete notes, diagrams, and model answers.
+      </div>
+      <a href="/ktujm/contribute/" style="font-weight: 600; color: #c05621; white-space: nowrap;">
+        Submit Notes for Credit &rarr;
+      </a>
+    </div>
+
+    <!-- Render Markdown note content -->
+    <div class="note-content" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px; margin: 24px 0;">
+      <div style="white-space: pre-wrap; font-family: inherit; line-height: 1.7;">
+        {markdownBody}
+      </div>
+    </div>
+
+    <!-- Navigation Footer -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--color-border);">
+      <a href={`/ktujm/courses/mamc/sem-${semNumber}/${paperCode.toLowerCase()}/`} style="font-weight: 600;">
+        &larr; Back to {paperCode} Outline
+      </a>
+      <a href="https://github.com/amirhashmilive/ktujm" target="_blank" rel="noopener noreferrer" style="font-size: 13px;">
+        Edit on GitHub ↗
+      </a>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,89 @@
+---
+// src/pages/career-alumni.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbs = [{ label: 'Career & Alumni' }];
+
+const sampleInterviews = [
+  {
+    name: 'Featured Alumni Interview #1 (Broadcast Journalism)',
+    batch: 'MAMC 2017-19',
+    designation: 'Senior Desk Producer, National News Network (New Delhi)',
+    excerpt: 'How studio production training in the Madhavrao Sapre block prepared me for fast-paced primetime broadcast operations.',
+    status: 'Coming Soon'
+  },
+  {
+    name: 'Featured Alumni Interview #2 (Public Relations & CSR)',
+    batch: 'MA (APR) 2018-20',
+    designation: 'Corporate Communications Lead, Infrastructure Conglomerate',
+    excerpt: 'Transitioning from classroom campaign planning to high-stakes corporate communication and ESG reporting.',
+    status: 'Coming Soon'
+  },
+  {
+    name: 'Featured Alumni Interview #3 (Digital & Data Journalism)',
+    batch: 'MJ 2019-21',
+    designation: 'Investigative Fact-Checker & Multi-Platform Editor',
+    excerpt: 'Why data literacy, verified citations, and regional language reporting are defining the next decade of Indian journalism.',
+    status: 'Coming Soon'
+  }
+];
+---
+
+<BaseLayout title="Career & Alumni Hub" breadcrumbs={breadcrumbs}>
+  <h1>Career & Alumni Hub</h1>
+  <p style="color: var(--color-text-muted); font-size: 16px; margin-bottom: 24px;">
+    Connecting current students with university graduates across national newsrooms, PR agencies, and research institutions.
+  </p>
+
+  <div class="card" style="border-left: 4px solid var(--color-primary); margin-bottom: 32px;">
+    <h3 style="margin-top: 0;">Alumni Spotlight & Media Series</h3>
+    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+      Our Ph.D. scholars regularly conduct and publish in-depth interviews with university alumni. These conversations unpack real-world career transitions, salary expectations, internship strategies, and industry changes.
+    </p>
+    <a href="/ktujm/contribute/#alumni-interview-guide" style="font-weight: 600; font-size: 13px;">
+      View Standard 8–10 Question Alumni Interview Template &rarr;
+    </a>
+  </div>
+
+  <section style="margin-bottom: 40px;">
+    <h2>Upcoming Alumni Profiles (Phase 2 Pipeline)</h2>
+    <div class="card-grid">
+      {sampleInterviews.map((item) => (
+        <div class="card">
+          <span class="badge badge-review" style="font-size: 10px; margin-bottom: 8px;">
+            {item.status}
+          </span>
+          <h3 style="font-size: 16px; margin: 8px 0 4px;">{item.name}</h3>
+          <div style="font-size: 12px; color: var(--color-primary-light); font-weight: 600; margin-bottom: 8px;">
+            {item.batch} • {item.designation}
+          </div>
+          <p style="font-size: 13px; color: var(--color-text-muted);">
+            {item.excerpt}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section style="margin-bottom: 40px;">
+    <div class="placeholder-box">
+      <h2>Alumni Mentorship Hours (Phase 3)</h2>
+      <p style="max-width: 600px; margin: 8px auto 0; font-size: 14px;">
+        Quarterly virtual mentorship sessions where featured alumni answer student questions about newsroom portfolios, civil services preparation, and media entrepreneurship.
+      </p>
+      <span class="phase-label">Scheduled for Phase 3 Launch</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="card" style="background: #f7fafc; text-align: center; padding: 24px;">
+      <h3 style="margin-top: 0;">Are You an Alumnus?</h3>
+      <p style="font-size: 14px; color: var(--color-text-muted); max-width: 500px; margin: 8px auto 16px;">
+        Share your professional journey with current students. Nominate yourself or an accomplished batchmate for our alumni interview series.
+      </p>
+      <a href="/ktujm/contribute/" style="background: var(--color-primary); color: #fff; padding: 8px 18px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none;">
+        Nominate an Alumnus &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

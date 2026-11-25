@@ -1,0 +1,68 @@
+---
+// src/pages/about.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbs = [{ label: 'About' }];
+---
+
+<BaseLayout title="About KTUJM Scholars & Founder's Vision" breadcrumbs={breadcrumbs}>
+  <h1>About KTUJM Scholars</h1>
+  <p style="color: var(--color-text-muted); font-size: 16px; margin-bottom: 24px;">
+    An independent, permanent academic commons founded by alumni and run by Ph.D. scholars.
+  </p>
+
+  <div class="card" style="border-left: 4px solid var(--color-primary); margin-bottom: 32px;">
+    <h2 style="margin-top: 0; color: var(--color-primary);">Founder's Vision</h2>
+    <p style="font-size: 15px; line-height: 1.7; margin-bottom: 16px;">
+      <em>"University life moves fast. Every two or three years, brilliant research scholars write notes, compile model answers, mentor their juniors, and then graduate. When they leave, their accumulated wisdom and study materials often disappear with them, forcing the next generation of students to start from zero.</em>
+    </p>
+    <p style="font-size: 15px; line-height: 1.7; margin-bottom: 16px;">
+      <em>I founded <strong>KTUJM Scholars</strong> to create a permanent, open-access knowledge repository that never expires. By uniting Ph.D. scholars across departments into an organized, peer-review editorial collective, we ensure that every student—regardless of financial background or access to coaching—has free access to high-quality academic notes, exam guides, and senior mentorship."</em>
+    </p>
+    <p style="font-size: 14px; font-weight: 600; text-align: right; color: var(--color-text-muted);">
+      — <strong>Amir Hashmi</strong><br />
+      <span style="font-size: 12px; font-weight: normal;">Founder & Permanent Patron • Alumnus & Ph.D. Scholar</span>
+    </p>
+  </div>
+
+  <section style="margin-bottom: 32px;">
+    <h2>Core Pillars of the Platform</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>1. Free & Open Academic LMS</h3>
+        <p style="font-size: 14px; color: var(--color-text-muted);">
+          Every paper in every semester is broken down into structured, syllabus-aligned topics complete with exam-oriented 5-mark and 10-mark questions. No paywalls, no login barriers.
+        </p>
+      </div>
+      <div class="card">
+        <h3>2. Permanent Ph.D. Scholar Oversight</h3>
+        <p style="font-size: 14px; color: var(--color-text-muted);">
+          Notes are not random crowdsourced snippets. They undergo rigorous verification by current doctoral researchers in Mass Communication, Journalism, Social Work, and Media Management.
+        </p>
+      </div>
+      <div class="card">
+        <h3>3. Active Alumni Mentorship</h3>
+        <p style="font-size: 14px; color: var(--color-text-muted);">
+          Connecting current undergraduates with university graduates working in major newsrooms, public relations agencies, broadcast channels, and public policy institutions across India.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 32px;">
+    <h2>Institutional Neutrality & Disclaimers</h2>
+    <div class="card" style="background: #f7fafc;">
+      <p style="font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+        <strong>KTUJM Scholars</strong> is an entirely independent, voluntary student initiative. It is not managed, funded, or administratively supervised by Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya.
+      </p>
+      <ul style="font-size: 13px; margin-left: 20px; line-height: 1.6; color: var(--color-text-muted);">
+        <li>We do not host or republish official marksheets, examination results, or confidential institutional documents.</li>
+        <li>We do not download or host copyright-protected university syllabus PDFs; all official ordinances are linked externally to <code>ktujm.ac.in</code>.</li>
+        <li>We maintain strict institutional neutrality and a constructive academic ethos free of campus politics.</li>
+      </ul>
+      <p style="margin-top: 12px;">
+        <a href="/ktujm/disclaimer/" style="font-weight: 600; font-size: 13px;">Read Full Policy & Neutrality Charter &rarr;</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

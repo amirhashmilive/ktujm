@@ -1,0 +1,38 @@
+---
+// src/components/Header.astro
+const navLinks = [
+  { href: '/ktujm/', label: 'Home' },
+  { href: '/ktujm/courses/', label: 'Courses' },
+  { href: '/ktujm/departments/', label: 'Departments' },
+  { href: '/ktujm/editorial-board/', label: 'Editorial Board' },
+  { href: '/ktujm/contribute/', label: 'Contribute' },
+  { href: '/ktujm/career-alumni/', label: 'Career & Alumni' },
+  { href: '/ktujm/about/', label: 'About' },
+  { href: '/ktujm/disclaimer/', label: 'Disclaimer' },
+];
+---
+
+<!-- Persistent Independent Disclaimer Top Banner -->
+<div class="disclaimer-banner" role="alert">
+  ⚖️ <strong>Independent, student-run initiative.</strong> Not affiliated with, sponsored by, or endorsed by Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya.
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/ktujm/" class="site-brand">
+      <span class="brand-icon">K</span>
+      <span>KTUJM Scholars</span>
+    </a>
+
+    <nav aria-label="Main Navigation">
+      {navLinks.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="pagefind-search-input" placeholder="Search notes, topics..." aria-label="Search notes" />
+    </div>
+  </div>
+</header>

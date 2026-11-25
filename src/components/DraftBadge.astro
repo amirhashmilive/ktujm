@@ -1,0 +1,14 @@
+---
+// src/components/DraftBadge.astro
+export interface Props {
+  status?: 'draft' | 'review' | 'published';
+}
+
+const { status = 'draft' } = Astro.props;
+---
+
+<span class={`badge badge-${status}`}>
+  {status === 'draft' && '🔴 Draft'}
+  {status === 'review' && '🟡 In Review'}
+  {status === 'published' && '🟢 Published'}
+</span>
